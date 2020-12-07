@@ -1,7 +1,9 @@
 import { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { store } from './store';
-import { fetchPatients } from './actions/patientActions';
+import { store } from '../../store';
+import { fetchPatients } from '../../actions/patientActions';
+
+import style from './PatientList.module.css';
 
 function PatientList() {
     const { state, dispatch } = useContext(store);
@@ -12,7 +14,7 @@ function PatientList() {
     }, []);
 
     return (
-        <div>
+        <div className={style.patientPage}>
             <h2>Patients</h2>
             <div>
                 {patient.patientList.map(p =>

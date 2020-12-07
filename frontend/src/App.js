@@ -4,7 +4,7 @@ import { store } from './store';
 import Login from './Login';
 import Logout from './Logout';
 import Loading from './Loading';
-import Header from './Header';
+import Header from './pages/header/Header';
 import { fetchUser } from './actions/userActions';
 
 function App() {

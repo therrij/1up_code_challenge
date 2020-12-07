@@ -1,7 +1,10 @@
 import { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { store } from './store';
-import { fetchPatients, fetchPatientEverything } from './actions/patientActions';
+import InfiniteScroll from '@jacksonrayhamilton/redux-infinite-scroll';
+import { store } from '../../store';
+import { fetchPatients, fetchPatientEverything, clearPatientEverything } from '../../actions/patientActions';
+
+import styles from './PatientDetails.module.css';
 
 function PatientDetails(props) {
     const { match: { params } } = props;
@@ -17,11 +20,19 @@ function PatientDetails(props) {
     }, [patientDetails]);
 
     useEffect(() => {
-        fetchPatientEverything(patientId, dispatch, state);
+        return () => clearPatientEverything(dispatch);
     }, []);
 
+    const renderRows = () => {
+        return (
+            patientEverything && patientEverything.entry.map(it =>
+                <PatientEntry key={it.resource.id} resource={it.resource} />
+            )
+        );
+    }
+
     return (
-        <div>
+        <div className={styles.detailsPage}>
             <Link to='/patients'>back to list</Link>
             <h3>
                 {patientDetails ? (patientDetails.name.map((name, idx) =>
@@ -32,10 +43,16 @@ function PatientDetails(props) {
                     <i>loading...</i>
                 )}
             </h3>
-            <div>
-                {patientEverything && patientEverything.entry.map(it =>
-                    <PatientEntry key={it.resource.id} resource={it.resource} />
-                )}
+            <div className={styles.detailsContainer}>
+                <InfiniteScroll
+                    items={renderRows()}
+                    hasMore={patientEverything.hasMore}
+                    loadingMore={patientEverything.isLoading}
+                    loadMore={() => fetchPatientEverything(patientId, dispatch, state)}
+                    showLoader={false}
+                    holderType='div'
+                    className={styles.infiniteScroll}
+                />
             </div>
         </div>
     );

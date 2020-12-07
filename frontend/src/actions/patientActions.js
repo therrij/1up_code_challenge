@@ -12,11 +12,16 @@ export const fetchPatients = async (dispatch) => {
     }
 };
 
+export const clearPatientEverything = async (dispatch) => {
+    dispatch({ type: actions.PATIENT_EVERYTHING_CLEAR });
+};
+
 export const fetchPatientEverything = async (patientId, dispatch, state) => {
     const { patientEverything } = state;
+    const link = patientEverything.link || []; 
+    const nextLink = link.find(it => it.relation === 'next');
 
-    console.log(patientEverything);
-    const offset = 0;
+    const offset = nextLink ? nextLink.url.slice(-2) : 0;
 
     dispatch({ type: actions.PATIENT_EVERYTHING_LOADING });
     try {

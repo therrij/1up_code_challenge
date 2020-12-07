@@ -1,0 +1,17 @@
+.detailsPage {
+    padding: 1em;
+}
+
+.detailsContainer {
+    height: 80vh;
+}
+
+.infiniteScroll {
+    overflow-x: hidden !important;
+}
+
+.infiniteScroll > div {
+    background-color: #e1f3e1;
+    margin: .25em;
+    padding: 0.75em;
+}

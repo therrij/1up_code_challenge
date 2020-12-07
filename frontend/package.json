@@ -4,6 +4,7 @@
   "description": "1up code challenge - front end",
   "private": true,
   "dependencies": {
+    "@jacksonrayhamilton/redux-infinite-scroll": "^1.0.9-76f362a",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.3.0",
@@ -30,7 +31,10 @@
       "prettier/react"
     ],
     "rules": {
-      "indent": ["warn", 4],
+      "indent": [
+        "warn",
+        4
+      ],
       "react/prop-types": "warn",
       "react/no-array-index-key": "off",
       "react/react-in-jsx-scope": "off",

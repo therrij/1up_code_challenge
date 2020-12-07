@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
-import { store } from './store';
-import PatientList from './PatientList';
-import PatientDetails from './PatientDetails';
+import { store } from '../../store';
+import PatientList from '../patient/PatientList';
+import PatientDetails from '../patientDetails/PatientDetails';
 
 import styles from './Header.module.css'
 
