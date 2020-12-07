@@ -1,11 +1,11 @@
 import { useEffect, useContext } from 'react';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
-import { store } from './store';
-import Login from './Login';
-import Logout from './Logout';
-import Loading from './Loading';
-import Header from './pages/header/Header';
-import { fetchUser } from './actions/userActions';
+import { store } from '../store';
+import Login from './common/Login';
+import Logout from './common/Logout';
+import Loading from './common/Loading';
+import Header from './header/Header';
+import { fetchUser } from '../actions/userActions';
 
 function App() {
     const { state, dispatch } = useContext(store);

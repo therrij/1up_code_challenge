@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
-import { store } from './store';
-import { logoutUser } from './actions/userActions';
+import { store } from '../../store';
+import { logoutUser } from '../../actions/userActions';
 
 function Logout() {
 

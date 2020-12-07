@@ -1,7 +1,7 @@
 import { useCallback, useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { store } from './store';
-import { loginUser } from './actions/userActions';
+import { store } from '../../store';
+import { loginUser } from '../../actions/userActions';
 
 function Login() {
 
