@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <div>
             <header className={styles.appHeader}>
-                <h1>1up Code Test App</h1>
+                <h1>Justin Therrien - 1up Code Test App</h1>
                 <div><b>User:</b> {user.email}</div>
                 <Link to='/logout'>log out</Link>
             </header>

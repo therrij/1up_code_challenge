@@ -33,9 +33,7 @@ const Patient = (props) => {
         <div>
             <h3>
                 {names.map((name, idx) =>
-                    <span key={idx}>
-                        <b>{name.text}</b> ({name.use})
-                    </span>
+                    <span key={idx}><b>{name.text}</b> ({name.use}) </span>
                 )}
             </h3>
             <div><b>Birth Date: </b> {birthDate}</div>

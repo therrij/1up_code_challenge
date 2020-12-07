@@ -28,8 +28,8 @@ function Login() {
                     Log in!
                 </p>
                 <form onSubmit={onSubmit}>
-                    <label htmlFor='email'>Your Email:<input name="email" /></label>
-                    <label htmlFor='password'>Your Password:<input name="password" /></label>
+                    <label htmlFor='email'>Your Email: <input name="email" /></label>
+                    <label htmlFor='password'>Your Password: <input name="password" /></label>
                     <button type="submit">Submit</button>
                 </form>
             </div>

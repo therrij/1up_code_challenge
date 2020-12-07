@@ -36,9 +36,7 @@ function PatientDetails(props) {
             <Link to='/patients'>back to list</Link>
             <h3>
                 {patientDetails ? (patientDetails.name.map((name, idx) =>
-                    <span key={idx}>
-                        <b>{name.text}</b> ({name.use})
-                    </span>
+                    <span key={idx}><b>{name.text}</b> ({name.use}) </span>
                 )) : (
                     <i>loading...</i>
                 )}

@@ -1,17 +1,12 @@
 import { Router } from 'express';
-import patientController from './patientController.js'
+import userController from './userController.js'
+import patientController from './patientController.js';
 
 const router = Router();
 
 
-const userController = (req, res, next) => {
-    const { email } = req.session;
-
-    res.json({ email });
-};
-
 router.route('/user')
-    .get(userController);
+    .get(userController.getUser);
 
 router.route('/patients')
     .get(patientController.getAll)

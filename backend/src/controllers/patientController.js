@@ -44,11 +44,11 @@ const getOne = async (req, res) => {
 
 // Just a stub, but I'd define further routes and their controllers
 // like this, with the defs in index.js and the methods here.
-const createOne = async (req, res, next) => {
+const createOne = async (req, res) => {
     res.status(500).json({ message: 'Not implemented.' });
 };
 
-const deleteOne = async (req, res, next) => {
+const deleteOne = async (req, res) => {
     res.status(500).json({ message: 'Not implemented.' });
 };
 
