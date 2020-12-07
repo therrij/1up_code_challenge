@@ -1,8 +1,8 @@
 ## Project dependencies:
- - Node 14.15.1 (prolly works in earlier but I haven't tested)
+ - Node 14.15.1 (prolly works in earlier but I haven't tested.)
  - A 1up application client id and client secret, as described here: https://1up.health/dev/quick-start
 
- The project in two halves, to separate dependencies and allow the front-end half to be managed by create-react-app. 
+ The project is in two halves - back and fron end - to separate code & dependencies for clarity, and to allow the front-end half to be managed by create-react-app.
 
 
 ## Setting up the front-end:
@@ -20,4 +20,4 @@ From /backend, run `npm start`. If you haven't changed the port in `.env`, the s
 
 ## For development
 The backend express server will serve the front-end from `/frontend/build`, which was generated in the build step above.
-Optionally, you can start a webpack server from the frontend to watch changes and hot-reload. To do so run `npm start` from /frontend. By default, this will start on port 3000.
+Optionally, you can also start a webpack server from the frontend to watch changes and hot-reload. To do so run `npm start` from /frontend. By default, this will start on port 3000.
