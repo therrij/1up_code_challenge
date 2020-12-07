@@ -46,6 +46,9 @@ export default class OneupUserApi {
                 res.status(403).send('Looks like you cannot access that.');
             }
 
+            // Also add the clientId to the session.
+            req.session.oneupClientId = this.APP_CLIENT_ID;
+
             console.log(`Got a token for user ${req.session.email}: ${req.session.oneupAccessToken}`);
             next();
          };

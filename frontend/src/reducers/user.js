@@ -2,6 +2,8 @@ import * as actions from '../constants/actions';
 
 const initialState = {
     email: '',
+    oneupClientId: '',
+    oneupAccessToken: '',
     isLoggedIn: false,
     isLoading: true
 };
@@ -12,8 +14,14 @@ const reducer = (state = initialState, action) => {
             return initialState;
         }
         case actions.USER_LOADED: {
-            const { email } = action.payload;
-            return { email, isLoggedIn: true, isLoading: false };
+            const { email, oneupClientId, oneupAccessToken } = action.payload;
+            return {
+                email,
+                oneupClientId,
+                oneupAccessToken,
+                isLoggedIn: true,
+                isLoading: false
+            };
         }
         case actions.USER_LOAD_ERROR: {
             return { isLoggedIn: false, isLoading: false };

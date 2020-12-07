@@ -1,3 +1,14 @@
 .patientPage {
     padding: 1em;
 }
+
+.systemForm {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 1em 0;
+}
+
+.systemForm > * {
+    margin-right: 0.5em;
+}
