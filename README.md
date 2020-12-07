@@ -2,7 +2,7 @@
  - Node 14.15.1 (prolly works in earlier but I haven't tested.)
  - A 1up application client id and client secret, as described here: https://1up.health/dev/quick-start
 
- The project is in two halves - back and fron end - to separate code & dependencies for clarity, and to allow the front-end half to be managed by create-react-app.
+ The project is in two halves - back and front end - to separate code & dependencies for clarity, and to allow the front-end half to be managed by create-react-app.
 
 
 ## Setting up the front-end:
